@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=FBI-OS Update
+Exec=/usr/local/bin/update_os
+Icon=system-software-update
+Type=Application
+Terminal=true
+Comment=Update FBI-OS to the latest version
