@@ -28,3 +28,24 @@ No match for argument: feh
 No match for argument: conky
 Error: Unable to find a match: feh conky
 inandargi@localhost:~/Music/Fbi-OS.iso-file$ 
+# error correction!
+# Install dependencies for feh
+sudo dnf install -y imlib2-devel giblib-devel make gcc git
+
+# Build and install feh
+git clone https://github.com/derf/feh.git
+cd feh
+make
+sudo make install
+cd ..
+
+# Install dependencies for conky
+sudo dnf install -y cmake gcc-c++ cairo-devel libX11-devel libXdamage-devel libXft-devel libXext-devel libXinerama-devel libxml2-devel libcurl-devel lua-devel git
+
+# Build and install conky
+git clone https://github.com/brndnmtthws/conky.git
+cd conky
+cmake .
+make
+sudo make install
+cd ..
