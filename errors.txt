@@ -1,9 +1,111 @@
-nandargi@localhost:~/Music/Fbi-OS.iso-file$ sudo -i
+inandargi@localhost:~/Music/Fbi-OS.iso-file$ git add .
+inandargi@localhost:~/Music/Fbi-OS.iso-file$ git commit -m "error log 2"
+[main 0e3087f] error log 2
+ Committer: Ishaan Rajendra Nandargi <inandargi@localhost.localdomain>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 21 insertions(+), 37 deletions(-)
+inandargi@localhost:~/Music/Fbi-OS.iso-file$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 851 bytes | 851.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Ishaanplaysz/Fbi-OS.iso-file.git
+   297fe9c..0e3087f  main -> main
+inandargi@localhost:~/Music/Fbi-OS.iso-file$  git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 530 bytes | 530.00 KiB/s, done.
+From https://github.com/Ishaanplaysz/Fbi-OS.iso-file
+   0e3087f..8244d4d  main       -> origin/main
+Updating 0e3087f..8244d4d
+Fast-forward
+ errors.txt | 23 ++++++++++++++++++++++-
+ 1 file changed, 22 insertions(+), 1 deletion(-)
+inandargi@localhost:~/Music/Fbi-OS.iso-file$ sudo -i
 [sudo] password for inandargi: 
-Sorry, try again.
-[sudo] password for inandargi: 
-Sorry, try again.
-[sudo] password for inandargi: 
+root@localhost:~# # error correction!
+# Install dependencies for feh
+sudo dnf install -y imlib2-devel giblib-devel make gcc git
+
+# Build and install feh
+git clone https://github.com/derf/feh.git
+cd feh
+make
+sudo make install
+cd ..make install/github.com/brndnmtthws/conky.git11-devel libXdamage-devel libXft-devel libXext-devel libXinerama-devel libxml2-devel libcurl-devel lua-devel git
+Last metadata expiration check: 0:17:21 ago on Thu 04 Sep 2025 11:17:23 AM IST.
+No match for argument: giblib-devel
+Error: Unable to find a match: giblib-devel
+Cloning into 'feh'...
+remote: Enumerating objects: 8235, done.
+remote: Counting objects: 100% (386/386), done.
+remote: Compressing objects: 100% (136/136), done.
+remote: Total 8235 (delta 323), reused 261 (delta 250), pack-reused 7849 (from 3)
+Receiving objects: 100% (8235/8235), 7.54 MiB | 19.99 MiB/s, done.
+Resolving deltas: 100% (5312/5312), done.
+bash: make: command not found...
+Install package 'make' to provide command 'make'? [N/y] y
+
+
+ * Waiting in queue... 
+ * Loading list of packages.... 
+The following packages have to be installed:
+ make-1:4.4.1-9.el10.x86_64     A GNU tool which simplifies the build process for users
+Proceed with changes? [N/y] y
+
+
+ * Waiting in queue... 
+ * Waiting for authentication... 
+ * Waiting in queue... 
+ * Loading list of packages.... 
+ * Downloading packages... 
+ * Requesting data... 
+ * Testing changes... 
+ * Installing packages... 
+make[1]: Entering directory '/root/feh/src'
+sed 's/^\(.*\)$/"\1\\n"/' < help.raw > help.inc
+cc -g -O2 -Wall -Wextra -pedantic -std=c11 -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -D_DARWIN_C_SOURCE -DHAVE_LIBCURL -DHAVE_MKSTEMPS -DHAVE_STRVERSCMP -DHAVE_LIBXINERAMA -DPREFIX=\"/usr/local\" -DPACKAGE=\"feh\" -DVERSION=\"3.11.1\" -MM events.c feh_png.c filelist.c gib_hash.c gib_imlib.c gib_list.c gib_style.c imlib.c index.c keyevents.c list.c main.c md5.c menu.c multiwindow.c options.c signals.c slideshow.c thumbnail.c timers.c utils.c wallpaper.c winwidget.c > deps.mk
+/bin/sh: line 1: cc: command not found
+Makefile:47: deps.mk: No such file or directory
+make[1]: *** [Makefile:57: deps.mk] Error 127
+make[1]: Leaving directory '/root/feh/src'
+make: *** [Makefile:6: build-src] Error 2
+
+make: *** No rule to make target 'man/feh.1', needed by 'install-man'.  Stop.
+Last metadata expiration check: 0:17:36 ago on Thu 04 Sep 2025 11:17:23 AM IST.
+No match for argument: lua-devel
+Error: Unable to find a match: lua-devel
+Cloning into 'conky'...
+remote: Enumerating objects: 30922, done.
+remote: Counting objects: 100% (245/245), done.
+remote: Compressing objects: 100% (140/140), done.
+remote: Total 30922 (delta 152), reused 105 (delta 105), pack-reused 30677 (from 4)
+Receiving objects: 100% (30922/30922), 23.11 MiB | 18.96 MiB/s, done.
+Resolving deltas: 100% (21252/21252), done.
+bash: cmake: command not found...
+Similar command is: 'make'
+make: *** No targets specified and no makefile found.  Stop.
+make: *** No rule to make target 'install'.  Stop.
+root@localhost:~# a
+bash: a: command not found...
+root@localhost:~# vmhc
+bash: vmhc: command not found...
 root@localhost:~# #!/bin/bash
 # Build script for FBI-OS ISO (CentOS compatible)
 set -e
@@ -15,37 +117,15 @@ sudo dnf install -y epel-release
 sudo dnf install -y debootstrap squashfs-tools xorriso grub2-pc mtools git-lfs feh conky
 
 echo "ISO build complete: $WORKDIR/$ISO_NAME"O_NAME" -b boot/grub/i386-pc/eltorito.img -no-emul-boot -boot-load-size 4 -boot-info-table "$WORKDIR/iso"
-Last metadata expiration check: 0:11:19 ago on Thu 04 Sep 2025 11:17:23 AM IST.
+Last metadata expiration check: 0:18:31 ago on Thu 04 Sep 2025 11:17:23 AM IST.
 Package epel-release-10-6.el10_0.noarch is already installed.
 Dependencies resolved.
 Nothing to do.
 Complete!
-Last metadata expiration check: 0:11:20 ago on Thu 04 Sep 2025 11:17:23 AM IST.
+Last metadata expiration check: 0:18:32 ago on Thu 04 Sep 2025 11:17:23 AM IST.
 Package squashfs-tools-4.6.1-6.el10.x86_64 is already installed.
 Package xorriso-1.5.6-6.el10.x86_64 is already installed.
 Package grub2-pc-1:2.12-24.el10.x86_64 is already installed.
 No match for argument: feh
 No match for argument: conky
 Error: Unable to find a match: feh conky
-inandargi@localhost:~/Music/Fbi-OS.iso-file$ 
-# error correction!
-# Install dependencies for feh
-sudo dnf install -y imlib2-devel giblib-devel make gcc git
-
-# Build and install feh
-git clone https://github.com/derf/feh.git
-cd feh
-make
-sudo make install
-cd ..
-
-# Install dependencies for conky
-sudo dnf install -y cmake gcc-c++ cairo-devel libX11-devel libXdamage-devel libXft-devel libXext-devel libXinerama-devel libxml2-devel libcurl-devel lua-devel git
-
-# Build and install conky
-git clone https://github.com/brndnmtthws/conky.git
-cd conky
-cmake .
-make
-sudo make install
-cd ..
