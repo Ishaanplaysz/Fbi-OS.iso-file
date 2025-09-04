@@ -1,0 +1,28 @@
+# FBI-OS Build & Usage Instructions
+
+## 1. Building FBI-OS ISO (Recommended: Linux VM)
+
+1. Install a Linux VM (Ubuntu recommended) using VirtualBox, VMware, or Hyper-V.
+2. Clone your repository into the VM:
+   git clone https://github.com/Ishaanplaysz/Fbi-OS.iso-file.git
+3. Open a terminal in the VM and run:
+   sudo apt-get update
+   sudo apt-get install -y debootstrap squashfs-tools xorriso grub-pc-bin grub-efi-amd64-bin mtools git-lfs feh conky-all
+4. Run the build script:
+   bash fbi-os/scripts/build_iso.sh
+5. The ISO file will be created in the build directory.
+
+## 2. Adding/Testing Features
+- Edit scripts and configs in the `fbi-os` folder as needed.
+- Commit and push changes using Git LFS for large files.
+
+## 3. Update Feature
+- FBI-OS includes an update button that runs the `update_os.sh` script.
+- This script pulls the latest code and updates the system automatically.
+
+## 4. Troubleshooting
+- If you encounter permission or mount errors, ensure you are running in a real Linux VM with root access.
+- Codespaces and WSL are not suitable for building bootable ISOs due to system restrictions.
+
+## 5. Need Help?
+- Reach out to GitHub Copilot or check the README for more details.
