@@ -24,5 +24,23 @@
 - If you encounter permission or mount errors, ensure you are running in a real Linux VM with root access.
 - Codespaces and WSL are not suitable for building bootable ISOs due to system restrictions.
 
-## 5. Need Help?
+## 5. Setting Up GitHub Token for Auto-Update
+
+To enable the auto-update feature in FBI-OS, you need to save your GitHub token securely:
+
+### On Linux (VM or WSL):
+1. Generate a GitHub token at https://github.com/settings/tokens (minimum scope: `public_repo` for public repos).
+2. Run these commands in your Linux terminal:
+   ```bash
+   echo "YOUR_GITHUB_TOKEN" > ~/.github_token
+   chmod 600 ~/.github_token
+   ```
+
+### On Windows:
+1. Create a file named `.github_token` in your user directory (e.g., `C:\Users\<your-username>\`).
+2. Paste your token inside the file.
+
+Never share your token publicly or commit it to your repository.
+
+## 6. Need Help?
 - Reach out to GitHub Copilot or check the README for more details.
